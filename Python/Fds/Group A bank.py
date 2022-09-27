@@ -10,9 +10,12 @@ d = float(input("How much would u like to deposit?\n"))
 t = float(input("How much would would u like to transact?\n"))
 choice = input("Do you want to deposit money or transact it?/n")
 
+# <--- deposit --->
 if choice == "deposit" or choice == "Deposit" or choice == "d" or choice == "D":
     k = float(input("Enter the amount to be deposited: "))
     d = k + d
+
+# <--- withdrawal --->
 elif choice == "Tran sact" or choice == "transact" or choice == "t" or choice == "T":
     if d > t:
         d = d - t
@@ -21,6 +24,3 @@ elif choice == "Tran sact" or choice == "transact" or choice == "t" or choice ==
         print(f"Transaction ammount ({t}) is more than your account balance ({d}). You cannot transact the said amount.")
 else: 
     print("Enter a valid choice")
-
-
-
