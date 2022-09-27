@@ -1,5 +1,6 @@
 
-# Aim: DA 
+# write function for the following
+# Aim: wap to store marks of students and compute average highest lowewst and frequency of class
 
 import statistics
 class_limit= int(input("Input the the number of students in class: "))
