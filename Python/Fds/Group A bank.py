@@ -8,7 +8,7 @@
 
 d = float(input("How much would u like to deposit?\n"))
 t = float(input("How much would would u like to transact?\n"))
-choice = input("Do you want to deposit money or transact it?/n")
+choice = input("Do you want to deposit money or transact it?\n")
 
 # <--- deposit --->
 if choice == "deposit" or choice == "Deposit" or choice == "d" or choice == "D":
