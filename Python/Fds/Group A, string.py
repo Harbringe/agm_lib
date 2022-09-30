@@ -5,7 +5,6 @@
 # 4. To display the index of first appearance of the sub string 
 # 5. To count the occurances of each word in given string
 
-import statistics
 
 s = str(input("Please input a string: "))
 list = []
@@ -14,6 +13,7 @@ list = []
 # <--- Word with longest length --->
 def longest_word(s):
     list = s.split(" ")
+    '''
     longest = 0
 
     # print("Longest words are: ", end= " ")
@@ -23,14 +23,15 @@ def longest_word(s):
     for word in list:
         if longest == len(word):
             print("The longest word is: ", word)
+            '''
+    print(max(list))
 longest_word(s)
 
 
 # <--- Frequency of occurance of char --->
 def freq(s):
-    s = s.replace(" ", "")
-    list.extend(s)
-    print(statistics.mode(list))
+    ct = input("Input a character: ")
+    print(f"{ct} occured {s.count(ct)} times.")
     
 freq(s)
 
@@ -46,13 +47,6 @@ def pallindrome(s):
 
 pallindrome(s)
 
-# <--- Occurances of a word in string --->
-def occurance(s):
-    list = s.split(" ")
-    for word in list: 
-        print("Occurance of", word, "= ", list.count(word))
-
-occurance(s)
 
 # <--- First appearance of sub-string ---> 
 def find_freq(s):   
@@ -61,6 +55,15 @@ def find_freq(s):
     print("First appearance of sub-string", s.find(find_word))
     print("Frequency of occurance of ", find_word, s.count(find_word))
 find_freq(s)
+
+# <--- Occurances of each word --->
+def occurance(s):
+    list = s.split(" ")
+    for word in list:
+        occ = list.count(word)
+        print(f"{word} occured {occ} times.")
+
+occurance(s)
 
 
 
