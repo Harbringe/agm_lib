@@ -7,7 +7,7 @@
 # 2. Write a function for withdrawal and deposit
 
 d = float(input("How much would u like to deposit?\n"))
-t = float(input("How much would would u like to transact?\n"))
+w = float(input("How much would would u like to withdraw?\n"))
 choice = input("Do you want to deposit money or transact it?\n")
 
 # <--- deposit --->
@@ -16,9 +16,9 @@ if choice == "deposit" or choice == "Deposit" or choice == "d" or choice == "D":
     d = k + d
 
 # <--- withdrawal --->
-elif choice == "Tran sact" or choice == "transact" or choice == "t" or choice == "T":
-    if d > t:
-        d = d - t
+elif choice == "Withdraw" or choice == "withdraw" or choice == "w" or choice == "W":
+    if d > w:
+        d = d - w
         print(f"You successfully withdrew {t}. You have {d} left.")
     else: 
         print(f"Transaction ammount ({t}) is more than your account balance ({d}). You cannot transact the said amount.")
